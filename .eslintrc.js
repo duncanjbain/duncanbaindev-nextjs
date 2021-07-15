@@ -21,6 +21,7 @@ module.exports = {
    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
    "react/prop-types": "off",
    "react/jsx-props-no-spreading": "off",
+   "arrow-body-style": "off",
   },
   extends: ["next", "next/core-web-vitals", 'plugin:react/recommended', 'airbnb', 'prettier'],
   plugins: ['react', 'prettier']

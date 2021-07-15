@@ -254,7 +254,9 @@ const Uses = () => (
         <a className="articleLink" href="https://nextjs.org/">
           Next.js
         </a>{' '}
-        - Next.js is an open-source development framework build on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites.
+        - Next.js is an open-source development framework build on top of
+        Node.js enabling React based web applications functionalities such as
+        server-side rendering and generating static websites.
       </li>
       <li className="articleLi">
         <a className="articleLink" href="https://tailwindcss.com/">
@@ -266,7 +268,7 @@ const Uses = () => (
         <a className="articleLink" href="https://vercel.com/">
           Vercel
         </a>{' '}
-        ​- Vercel is a deployment and collaboration platform for frontend
+        - Vercel is a deployment and collaboration platform for frontend
         developers.
       </li>
     </ul>

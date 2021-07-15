@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Uses from '../components/Uses';
 
-export const uses = () => (
+const UsesPage = () => (
     <div>
       <Head>
         <title>Create Next App</title>
@@ -13,4 +13,4 @@ export const uses = () => (
   );
 
 
-export default uses;
+export default UsesPage;

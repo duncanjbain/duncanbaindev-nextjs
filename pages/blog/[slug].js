@@ -13,7 +13,7 @@ export const BlogPost = ({ post: { code, frontmatter } }) => {
       <time dateTime={publishedAt.toISOString()}>
                 {format(publishedAt, 'dd MMM yyyy')}
               </time>
-      <div>
+      <div className="prose-lg lg:prose-xl">
         <Component components={MdxComponents} />
       </div>
     </div>

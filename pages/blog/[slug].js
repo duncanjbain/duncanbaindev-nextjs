@@ -2,8 +2,9 @@ import * as React from 'react';
 import { format, parseISO } from 'date-fns'
 import { getMDXComponent } from 'mdx-bundler/client';
 import { getMdxBySlug, getAllFrontMatters } from '../../lib/getMdx';
+import MdxComponents from '../../components/MdxComponents';
 
-const BlogPost = ({ post: { code, frontmatter } }) => {
+export const BlogPost = ({ post: { code, frontmatter } }) => {
   const Component = React.useMemo(() => getMDXComponent(code), [code]);
   const publishedAt = parseISO(frontmatter.published)
   return (
@@ -13,7 +14,7 @@ const BlogPost = ({ post: { code, frontmatter } }) => {
                 {format(publishedAt, 'dd MMM yyyy')}
               </time>
       <div>
-        <Component />
+        <Component components={MdxComponents} />
       </div>
     </div>
   );

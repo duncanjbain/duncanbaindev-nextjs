@@ -1,5 +1,5 @@
 const Intro = () => (
-    <section className="px-8 md:py-2 mb-8">
+    <section className="md:py-2 mb-8">
       <p className="text-2xl md:text-4xl font-bold text-blue-500 mb-4">
         Hello!{' '}
         <span role="img" aria-label="Waving hand emoji icon">

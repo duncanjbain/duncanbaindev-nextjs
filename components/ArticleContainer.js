@@ -1,7 +1,7 @@
 const ArticleContainer = ({children}) => (
-    <section className="px-8 break-words mb-16">
+    <article className="prose lg:prose-xl min-w-full">
         {children}
-    </section>
+    </article>
 )
 
 export default ArticleContainer;

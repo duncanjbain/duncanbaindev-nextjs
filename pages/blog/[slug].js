@@ -9,7 +9,7 @@ export const BlogPost = ({ post: { code, frontmatter } }) => {
   const Component = React.useMemo(() => getMDXComponent(code), [code]);
   return (
     <>
-    <div className="mb-2 lg:mb-4">
+    <div className="mb-2 lg:mb-4 border-b-2 border-blue-400">
     <h2 className="text-4xl text-gray-800 font-black leading-snug mb-2">{frontmatter.title}</h2>
       <ArticleDate published={frontmatter.published} />
     </div>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Intro from '../components/Intro';
 import Anchor from '../components/Anchor';
 import { getAllFrontMatters } from '../lib/getMdx';
+import ArticleDate from '../components/ArticleDate';
 
 export default function Home({ posts }) {
   const POSTS_DISPLAYED = 5;
@@ -30,9 +31,9 @@ export default function Home({ posts }) {
           {posts.slice(0, POSTS_DISPLAYED).map((frontMatter) => {
             const { slug, published, excerpt, title } = frontMatter;
             return (
-              <li key={slug}>
+              <li key={slug} className="mb-4 lg:mb-8">
                 <article>
-                  <div>
+                  <div className="mb-2">
                     <Link href={`/blog/${slug}`} passHref>
                       <Anchor>
                         <h3 className="leading-tight mb-2 mt-0 font-black text-gray-800 text-xl lg:text-3xl hover:underline cursor-pointer">
@@ -41,7 +42,7 @@ export default function Home({ posts }) {
                       </Anchor>
                     </Link>
 
-                    <time>{published}</time>
+                    <ArticleDate published={published} />
                   </div>
                   <div>{excerpt}</div>
                 </article>

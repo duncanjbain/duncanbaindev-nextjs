@@ -3,20 +3,24 @@ import { format, parseISO } from 'date-fns'
 import { getMDXComponent } from 'mdx-bundler/client';
 import { getMdxBySlug, getAllFrontMatters } from '../../lib/getMdx';
 import MdxComponents from '../../components/MdxComponents';
+import ArticleContainer from '../../components/ArticleContainer';
 
 export const BlogPost = ({ post: { code, frontmatter } }) => {
   const Component = React.useMemo(() => getMDXComponent(code), [code]);
   const publishedAt = parseISO(frontmatter.published)
   return (
-    <div>
-      <h1>{frontmatter.title}</h1>
-      <time dateTime={publishedAt.toISOString()}>
+    <>
+    <div className="mb-2 lg:mb-4">
+    <h2 className="text-4xl text-gray-800 font-black leading-snug mb-2">{frontmatter.title}</h2>
+      <time className="text-lg text-gray-500 mb-2 lg:mb-4" dateTime={publishedAt.toISOString()}>
                 {format(publishedAt, 'dd MMM yyyy')}
               </time>
-      <div className="prose-lg lg:prose-xl">
-        <Component components={MdxComponents} />
-      </div>
     </div>
+
+      <ArticleContainer>
+        <Component components={MdxComponents} />
+      </ArticleContainer>
+    </>
   );
 };
 

@@ -1,7 +1,5 @@
-import ArticleContainer from './ArticleContainer';
-
 const Uses = () => (
-  <ArticleContainer>
+  <section className="px-8 md:py-2 mb-8 break-words">
     <h2 className="articleH2">Uses</h2>
     <p className="articleP">
       Inspirsed by Wes Bos and his{' '}
@@ -272,7 +270,7 @@ const Uses = () => (
         developers.
       </li>
     </ul>
-  </ArticleContainer>
+  </section>
 );
 
 export default Uses;

@@ -17,7 +17,7 @@ export default function Home({ posts }) {
       <Intro />
       <div>
         <div>
-          <h2 className="text-xl md:text-3xl font-bold text-blue-600 border-b-2 border-blue-400 mb-4">
+          <h2 className="text-xl md:text-3xl font-bold text-blue-500 border-b-2 border-blue-400 mb-4">
             Latest Posts
             <Link href="/blog" passHref>
               <Anchor className="text-lg md:text-2xl text-gray-700 hover:text-blue-400 float-right font-normal transition hover ease-in-out 0.3s">

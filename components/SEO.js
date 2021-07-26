@@ -31,3 +31,5 @@ export const PageSeo = ({ title, description }) => {
     </Head>
   );
 };
+
+export default PageSeo;

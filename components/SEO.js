@@ -32,4 +32,27 @@ export const PageSeo = ({ title, description }) => {
   );
 };
 
+export const BlogSeo = ({ title, summary }) => {
+  const router = useRouter();
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="robots" content="follow, index" />
+      <meta
+        property="og:url"
+        content={`https://duncanbain.dev${router.asPath}`}
+      />
+      <meta property="og:type" content="article" />
+      <meta property="og:site_name" content="duncanbain.dev" />
+      <meta property="og:description" content={summary} />
+      <meta property="og:title" content={title} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@duncanjbain" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={summary} />
+      <link rel="canonical" href={`https://duncanbain.dev${router.asPath}`} />
+    </Head>
+  );
+};
+
 export default PageSeo;

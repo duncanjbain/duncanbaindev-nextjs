@@ -1,12 +1,10 @@
-import ArticleContainer from '../components/ArticleContainer';
 import ProjectCard from '../components/ProjectCard';
-import duncanbaindevProject from '../images/duncanbaindev.png';
-import bugTrackerProject from '../images/bugtracker.png'
+import duncanbaindevProject from '../public/images/projects/duncanbaindev.png';
+import bugTrackerProject from '../public/images/projects/bugtracker.png'
 
 const ProjectsPage = () => {
   return (
-    <ArticleContainer>
-      <div className="flex flex-wrap flex-col lg:flex-row">
+      <div className="w-full lg:w-2/3 mx-auto flex flex-wrap flex-col lg:flex-row">
         <ProjectCard
           projectImgSrc={duncanbaindevProject}
           projectImgAlt="An image showing the website duncanbain.dev"
@@ -24,7 +22,6 @@ const ProjectsPage = () => {
           projectDemo="https://bugtracker.duncanbain.dev"
         />
       </div>
-    </ArticleContainer>
   );
 };
 
